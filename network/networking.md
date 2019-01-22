@@ -8,14 +8,38 @@ http://beej.us/guide/bgnet/html/multi/index.html
 |Term|Definition|
 |----|---|
 |NAT|Maps public ips to private ips, typically performed by your router
-|private IP|The actual ip address associated with the machine hardware.
-|public IP| The virtual ip address that is assigned by your isp
+|Private IP|The actual ip address associated with the machine hardware.
+|Public IP| The virtual ip address that is assigned by your isp
 |ISP| internet service provider
 |DHCP| Dynamic Host Configuration protocol
-|OSI||
+|OSI|| The network stack
 |LTE|Long Term Evolution
 |Network Interface|The interface to the network on the actual hardware network card
 |SCTP| The future of TCP where multiple connections can be stream concurrently|
+|Router|
+|Switch|
+|Mac Address| a 48 bit address that is assigned to your computer by the hardware manufacturer
+|Modem|
+|Edge|A host computer at the edge of the network
+|Edge Router| The router at the edge of the network
+
+## Open Questions
+
+- Modem vs router vs gateway?
+- Router is a gateway? 
+
+## DHCP
+
+A broadcast protocol to the DHCP server to aquire a public IP. Every device has a DHCP client installed on it. 
+
+## Switches
+
+- Routers
+- Link Layer Switches
+
+### Store and forward switching
+
+The router will hold onto the bits of a packet before forwarding them to the next node. This syncronizes the stream so a complete packet is forwarded to the next node. 
 
 ::1 is short hand for localhost in IPv6 (just like 127.0.0.1 for IPv4)
 
@@ -79,8 +103,9 @@ The network is homogeneous.
 ## The network stack
 
 |Nework Stack|
-|----|
-|Application|
-|TCP/UDP|
-|IP|
-|Hardware|
+|----|----|
+|Application| Sockets
+|TCP/UDP| Transport layer
+|IP| Internet protocol
+|Link| MAC Address
+|Hardware| Network Interface
