@@ -18,10 +18,14 @@ http://beej.us/guide/bgnet/html/multi/index.html
 |SCTP| The future of TCP where multiple connections can be stream concurrently|
 |Router|
 |Switch|
+|SSL| Secure Socket Layer, an enhancement to TCP that occurs at the application layer.
 |Mac Address| a 48 bit address that is assigned to your computer by the hardware manufacturer
 |Modem|
 |Edge|A host computer at the edge of the network
 |Edge Router| The router at the edge of the network
+|Ethernet| Creates a network of computers (LAN) connected by physical copper wires
+|Ack|A response from the receiver of a packet that the transmission was succesful (tcp)
+|FTP| File Transfer Protocol
 
 ## Open Questions
 
@@ -44,6 +48,10 @@ The router will hold onto the bits of a packet before forwarding them to the nex
 ::1 is short hand for localhost in IPv6 (just like 127.0.0.1 for IPv4)
 
 the default port for http is port 80. Is is normal for each protocol to have a default port.
+
+## Ethernet
+
+Ethernet uses mac addresses which are on the physical hardware to communicate to each other. When many computer are on an ethernet network the wires can be busy. Messages are broadcasted out to every edge of the network which clogs up the pipes. Switches are introduced to determine if the message actually needs to be send to a certain part of the network. 
 
 ## Peer to Peer
 
@@ -100,12 +108,23 @@ There is one administrator.
 Transport cost is zero.
 The network is homogeneous.
 
-## The network stack
+## The standard network stack
 
 |Nework Stack|
 |----|----|
 |Application| Sockets
 |TCP/UDP| Transport layer
+|IP| Internet protocol
+|Link| MAC Address
+|Hardware| Network Interface
+
+## The osi network stack
+
+|Nework Stack|
+|----|----|
+|Application| Sockets
+|TCP/UDP| Transport layer
+|Session|
 |IP| Internet protocol
 |Link| MAC Address
 |Hardware| Network Interface
